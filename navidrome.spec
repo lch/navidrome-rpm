@@ -89,6 +89,7 @@ install -p -m 0644 %{SOURCE5} %{buildroot}%{_sysconfdir}/%{name}/%{name}.toml
 rm -rf ui/node_modules
 %go_vendor_license_check -c %{S:2}
 %if %{with check}
+export CGO_CFLAGS_ALLOW='.*define-prefix.*'
 %gotest -tags netgo ./...
 %endif
 
