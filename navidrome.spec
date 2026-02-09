@@ -61,6 +61,9 @@ make setup
 make buildjs
 
 %global gomodulesmode GO111MODULE=on
+# Allow pkg-config option '--define-prefix'
+# https://go.dev/wiki/InvalidFlag
+export CGO_CFLAGS_ALLOW='.*define-prefix.*'
 export GO_LDFLAGS="-X github.com/navidrome/navidrome/consts.gitSha=%{version}-%{release} -X github.com/navidrome/navidrome/consts.gitTag=%{version}-%{release}"
 export GO_BUILDTAGS="netgo"
 %gobuild -o %{gobuilddir}/bin/navidrome %{goipath}
