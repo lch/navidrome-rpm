@@ -86,9 +86,10 @@ install -p -m 0644 %{SOURCE5} %{buildroot}%{_sysconfdir}/%{name}/%{name}.toml
 %sysusers_create_compat %{SOURCE4}
 
 %check
+rm -rf ui/node_modules
 %go_vendor_license_check -c %{S:2}
 %if %{with check}
-%gotest ./...
+%gotest -tags netgo ./...
 %endif
 
 %files -f %{go_vendor_license_filelist}
