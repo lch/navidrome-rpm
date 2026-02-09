@@ -78,13 +78,12 @@ install -m 0755 -vd %{buildroot}%{_sysconfdir}/%{name}
 
 install -m 0755 -vd %{buildroot}%{_sharedstatedir}/%{name}/{data,music}
 
-install -p -m 0755 %{name} %{buildroot}%{_bindir}/%{name}
-install -p -m 0644 %{SOURCE1} %{buildroot}%{_unitdir}/%{name}.service
-install -p -D -m 0644 %{SOURCE2} %{buildroot}%{_sysusersdir}/%{name}.conf
-install -p -m 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/%{name}/%{name}.toml
+install -p -m 0644 %{SOURCE3} %{buildroot}%{_unitdir}/%{name}.service
+install -p -D -m 0644 %{SOURCE4} %{buildroot}%{_sysusersdir}/%{name}.conf
+install -p -m 0644 %{SOURCE5} %{buildroot}%{_sysconfdir}/%{name}/%{name}.toml
 
 %pre
-%sysusers_create_compat %{SOURCE2}
+%sysusers_create_compat %{SOURCE4}
 
 %check
 %go_vendor_license_check -c %{S:2}
