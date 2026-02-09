@@ -95,7 +95,7 @@ export CGO_CFLAGS_ALLOW='.*define-prefix.*'
 
 %files -f %{go_vendor_license_filelist}
 %doc CODE_OF_CONDUCT.md CONTRIBUTING.md README.md contrib/k8s/README.md
-%doc core/agents/README.md examples plugins/README.md
+%doc core/agents/README.md plugins/README.md
 %doc plugins/capabilities/README.md plugins/cmd/ndpgen/README.md
 %doc plugins/pdk/go/README.md plugins/pdk/rust/README.md
 %doc plugins/pdk/rust/nd-pdk-host/README.md resources/banner.txt
