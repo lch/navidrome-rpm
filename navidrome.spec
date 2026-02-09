@@ -1,5 +1,5 @@
 Name:           navidrome
-Version:        0.59.0
+Version:        0.60.2
 Release:        1%{?dist}
 Summary:        Modern Music Server and Streamer compatible with Subsonic/Airsonic 
 
@@ -12,13 +12,12 @@ Source3:        navidrome.toml
 
 Patch0:         0001-Fix-Makefile-for-packaging.patch
 Patch1:         0002-Fix-about-version-number-for-packaging.patch
-Patch2:         0003-Update-dependency-to-specify-taglib-2.patch
 
 BuildRequires:  git
 BuildRequires:  golang >= 1.21
 BuildRequires:  nodejs20
 BuildRequires:  nodejs-npm
-BuildRequires:  taglib2-devel, zlib-devel, zlib
+BuildRequires:  taglib-devel, zlib-devel, zlib
 BuildRequires:  make, gcc, gcc-c++
 BuildRequires:  systemd-units
 BuildRequires:  systemd-rpm-macros
@@ -27,7 +26,7 @@ BuildRequires:  systemd-rpm-macros
 Requires: systemd-units
 Requires: zlib
 Requires: ffmpeg
-Requires: taglib2
+Requires: taglib
 
 %description
 
