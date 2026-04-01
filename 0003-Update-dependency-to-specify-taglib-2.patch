@@ -1,7 +1,7 @@
-From 6d7de03e0ad9c2869878e04fb29e14883da13bfe Mon Sep 17 00:00:00 2001
+From c22c831dd5acf720ca3d23dcfd6b55826a8225f6 Mon Sep 17 00:00:00 2001
 From: lch <lchopn@gmail.com>
-Date: Mon, 17 Mar 2025 16:55:10 +0800
-Subject: [PATCH 3/3] Update dependency to specify taglib-2
+Date: Wed, 1 Apr 2026 14:00:19 +0800
+Subject: [PATCH 3/3] Update dependency to specify taglib 2
 
 ---
  adapters/taglib/taglib_wrapper.go | 2 +-
@@ -21,5 +21,5 @@ index 4a979920..85b12da3 100644
  #cgo illumos LDFLAGS: -lstdc++ -lsendfile
  #cgo linux darwin CXXFLAGS: -std=c++11
 -- 
-2.50.1
+2.53.0
 
