@@ -30,7 +30,7 @@ Patch1:         0002-Fix-about-version-number-for-packaging.patch
 
 BuildRequires:  go-vendor-tools
 BuildRequires:  nodejs24, /usr/bin/node, /usr/bin/npm
-BuildRequires:  taglib-devel, zlib-devel, zlib
+BuildRequires:  zlib-devel, zlib
 BuildRequires:  make, gcc, gcc-c++
 BuildRequires:  systemd-units
 BuildRequires:  systemd-rpm-macros
@@ -38,7 +38,6 @@ BuildRequires:  systemd-rpm-macros
 Requires: systemd-units
 Requires: zlib
 Requires: ffmpeg
-Requires: taglib
 
 %{?sysusers_requires_compat}
 
