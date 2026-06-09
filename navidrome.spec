@@ -3,7 +3,7 @@
 
 # https://github.com/navidrome/navidrome
 %global goipath         github.com/navidrome/navidrome
-Version:                0.61.2
+Version:                0.62.0
 
 %gometa -L -f
 
